@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* Extracted from 
+ * https://morgantechspace.com/2013/11/Set-or-Grant-Logon-As-A-Service-right-to-User.html#ViaCSharp
+ */
+using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -160,7 +163,7 @@ namespace SetLogonAsService
 
                 if (winErrorCode != 0)
                 {
-                    Console.WriteLine("OpenPolicy failed: " + winErrorCode);
+                    Console.WriteLine("OpenPolicy failed: " + winErrorCode + "\n MAKE SURE THIS IS RUN AS ADMINISTRATOR");
                 }
                 else
                 {
